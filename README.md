@@ -14,6 +14,3 @@ to build the project:
 
 `npm build`
 
-to run tests:
-
-`npm test`
