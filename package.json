@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require test_init.js './lib/**/*.test.@(js|jsx)' './components/**/*.test.@(js|jsx)'",
+    "test": "mocha --require test_init.js  './components/**/*.test.@(js|jsx)'",
     "dev": "webpack-dev-server",
     "build": "webpack --config webpack.config.js --bail"
   },

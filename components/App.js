@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Bill from './Bill';
+import Statement from './Statement';
 
 export default class App extends Component {
     render() {
-        return <Bill />;
+        return <Statement />;
     }
 }
 

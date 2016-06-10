@@ -3,6 +3,8 @@ require("babel-core/register")({
     sourceMaps: "both"
 });
 
+require("babel-polyfill");
+
 var jsdom = require('jsdom');
 
 var doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
