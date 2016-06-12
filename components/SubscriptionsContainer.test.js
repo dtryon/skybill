@@ -1,5 +1,6 @@
 import React from 'react';
-import { renderIntoDocument, scryRenderedComponentsWithType } from 'react-addons-test-utils';
+import ReactDOM from 'react-dom';
+import { renderIntoDocument, scryRenderedComponentsWithType, findRenderedDOMComponentWithClass } from 'react-addons-test-utils';
 import { expect } from 'chai';
 
 import SubscriptionsContainer from './SubscriptionsContainer';
@@ -21,6 +22,14 @@ describe('SubscriptionsContainer', () => {
         const children = scryRenderedComponentsWithType(component, PackageSubscription);
 
         expect(children.length).to.equal(3);
+    });
+
+    it('should render total', () => {
+        const component = renderIntoDocument(<SubscriptionsContainer total={3.47}/>);
+
+        const total = findRenderedDOMComponentWithClass(component, 'SubscriptionsContainer_total');
+
+        expect(ReactDOM.findDOMNode(total).textContent).to.equal('£3.47')
     });
 });
 

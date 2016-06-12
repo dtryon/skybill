@@ -30,10 +30,10 @@ export default class StorePurchase extends Component {
             <div className="grid StorePurchase_items">
                 { this.props.purchases.length && this.props.purchases.map((purchase, i) => {
                     return (<div key={this.props.type + i} className="grid-row StorePurchase_item">
-                        <div className="grid-col-md-90 StorePurchase_item_name">
+                        <div className="grid-col-xs-50 grid-col-md-90 StorePurchase_item_name">
                             <p>{ purchase.title }</p>
                         </div>
-                        <div className="grid-col-md-10 StorePurchase_item_cost">
+                        <div className="grid-col-xs-50 grid-col-md-10 StorePurchase_item_cost">
                             <p>£{ purchase.cost }</p>
                         </div>
                     </div>);

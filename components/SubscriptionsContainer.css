@@ -10,7 +10,6 @@
    color: #E5E5E5;
    font-size: 1.5rem;
    letter-spacing: 4px;
-   padding: 20px;
 }
 
 .SubscriptionsContainer_title i {
@@ -22,4 +21,15 @@
 .SubscriptionsContainer_items {
    border-top: 5px solid #16A085;
    background-color: #E8E8E8;
+}
+
+.SubscriptionsContainer_icon {
+   padding: 20px;
+}
+
+.SubscriptionsContainer_charges {
+   padding: 20px;
+   line-height: 2.5rem;
+   font-weight: 700;
+   font-size: 2rem;
 }

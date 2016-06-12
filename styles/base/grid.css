@@ -25,6 +25,11 @@
    float: left;
 }
 
+.grid-col-xs-50 {
+   width: 50%;
+   float: left;
+}
+
 @media (min-width: 34em) {
    .grid-col-md-33 {
       width: 33.3333%;

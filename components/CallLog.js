@@ -15,10 +15,10 @@ export default class CallLog extends Component {
             <div className="grid CallLog_calls">
                 { this.props.calls.length && this.props.calls.map((call, i) => {
                     return (<div key={'call' + i} className="grid-row CallLog_call">
-                        <div className="grid-col-md-90 CallLog_info">
+                        <div className="grid-col-xs-50 grid-col-md-90 CallLog_info">
                             <p><i className="material-icons">call_made</i> CALLED -> { call.called } ({ call.duration })</p>
                         </div>
-                        <div className="grid-col-md-10 CallLog_cost">
+                        <div className="grid-col-xs-50 grid-col-md-10 CallLog_cost">
                             <p>£{ call.cost }</p>
                         </div>
                     </div>);

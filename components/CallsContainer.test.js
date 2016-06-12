@@ -1,5 +1,6 @@
 import React from 'react';
-import { renderIntoDocument, findRenderedComponentWithType } from 'react-addons-test-utils';
+import ReactDOM from 'react-dom';
+import { renderIntoDocument, findRenderedComponentWithType, findRenderedDOMComponentWithClass } from 'react-addons-test-utils';
 import { expect } from 'chai';
 
 import CallsContainer from './CallsContainer';
@@ -20,6 +21,14 @@ describe('CallsContainer', () => {
 
         expect(child).to.not.be.undefined;
         expect(child.props.id).to.equal('foo');
+    });
+
+    it('should render total', () => {
+        const component = renderIntoDocument(<CallsContainer total={3.45}/>);
+
+        const total = findRenderedDOMComponentWithClass(component, 'CallsContainer_total');
+
+        expect(ReactDOM.findDOMNode(total).textContent).to.equal('£3.45')
     });
 });
 

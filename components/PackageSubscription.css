@@ -25,3 +25,7 @@
    padding: 20px;
    min-height: 50px;
 }
+
+.PackageSubscription_cost {
+   text-align: right;
+}

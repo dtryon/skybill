@@ -30,10 +30,10 @@ export default class PackageSubscription extends Component {
                 <div className="PackageSubscription_title"><i className="material-icons">{ this.chooseIcon(this.props.type)} </i> {this.props.type.toUpperCase()}</div>
                 <div className="grid PackageSubscription_item">
                     <div className="grid-row">
-                        <div className="grid-col-md-90 PackageSubscription_name">
+                        <div className="grid-col-xs-50 grid-col-md-90 PackageSubscription_name">
                             <p>{ this.props.name }</p>
                         </div>
-                        <div className="grid-col-md-10 PackageSubscription_cost">
+                        <div className="grid-col-xs-50 grid-col-md-10 PackageSubscription_cost">
                             <p>£{ this.props.cost }</p>
                         </div>
                     </div>
