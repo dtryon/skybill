@@ -8,7 +8,7 @@ export default class SkyStoreContainer extends Component {
                     <div><i className="material-icons">shopping_cart</i> SKY STORE</div>
                 </div>
                 <div className="grid-col-xs grid-col-md-33 SkyStoreContainer_charges">
-                    <p className="SkyStoreContainer_total">£{ this.props.total }</p>
+                    <p className="SkyStoreContainer_total">£{ this.props.total.toFixed(2) }</p>
                 </div>
             </div>
             <div className="grid-row SkyStoreContainer_items">

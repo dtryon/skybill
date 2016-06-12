@@ -16,7 +16,7 @@ export default class SubscriptionsContainer extends Component {
                     <div><i className="material-icons">subscriptions</i> SUBCRIPTIONS</div>
                 </div>
                 <div className="grid-col-xs grid-col-md-33 SubscriptionsContainer_charges">
-                    <p className="SubscriptionsContainer_total">£{this.props.total}</p>
+                    <p className="SubscriptionsContainer_total">£{ this.props.total.toFixed(2) }</p>
                 </div>
             </div>
             <div className="grid-row SubscriptionsContainer_items">

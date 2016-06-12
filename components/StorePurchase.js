@@ -34,7 +34,7 @@ export default class StorePurchase extends Component {
                             <p>{ purchase.title }</p>
                         </div>
                         <div className="grid-col-xs-50 grid-col-md-10 StorePurchase_item_cost">
-                            <p>£{ purchase.cost }</p>
+                            <p>£{ purchase.cost.toFixed(2) }</p>
                         </div>
                     </div>);
                 })}

@@ -19,7 +19,7 @@ export default class CallLog extends Component {
                             <p><i className="material-icons">call_made</i> CALLED -> { call.called } ({ call.duration })</p>
                         </div>
                         <div className="grid-col-xs-50 grid-col-md-10 CallLog_cost">
-                            <p>£{ call.cost }</p>
+                            <p>£{ call.cost.toFixed(2) }</p>
                         </div>
                     </div>);
                 })}
