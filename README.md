@@ -7,16 +7,15 @@
 `npm install`
 
 ### then, you might want to
-run tests:
-
+#### run tests:
 `npm test`
 
-start the project:
-
+#### start the project:
 `npm run dev`
 
-build the project:
+This will start the project at: http://localhost:8080
 
+#### build the project:
 `npm run build`
 
 ### discussion:
