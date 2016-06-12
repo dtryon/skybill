@@ -1,18 +1,43 @@
 import React, { Component } from 'react';
 
 export default class StorePurchase extends Component {
+    static propTypes = {
+        purchases: React.PropTypes.array,
+        type: React.PropTypes.string,
+        name: React.PropTypes.string
+    }
+
+    static defaultProps = {
+        purchases: [],
+        type: '',
+        name: ''
+    }
+
+    chooseIcon(type) {
+        switch(type) {
+            case 'rental':
+                return 'schedule';
+            case 'buy':
+                return 'home';
+            default:
+                return 'credit_card';
+        }
+    }
+
     render () {
-        return (<article className="grid-col-xs grid-col-md-50">
-            <div><i className="material-icons">schedule</i> RENTALS</div>
-            <div className="grid">
-                <div className="grid-row">
-                    <div className="grid-col-md-90">
-                        <p>Variety and Movie HD</p>
-                    </div>
-                    <div className="grid-col-md-10">
-                        <p>£4.55</p>
-                    </div>
-                </div>
+        return (<article className="grid-col-xs grid-col-md-50 StorePurchase">
+            <div className="StorePurchase_title"><i className="material-icons">{ this.chooseIcon(this.props.type) }</i> { this.props.name }</div>
+            <div className="grid StorePurchase_items">
+                { this.props.purchases.length && this.props.purchases.map((purchase, i) => {
+                    return (<div key={this.props.type + i} className="grid-row StorePurchase_item">
+                        <div className="grid-col-md-90 StorePurchase_item_name">
+                            <p>{ purchase.title }</p>
+                        </div>
+                        <div className="grid-col-md-10 StorePurchase_item_cost">
+                            <p>£{ purchase.cost }</p>
+                        </div>
+                    </div>);
+                })}
             </div>
         </article>);
     }

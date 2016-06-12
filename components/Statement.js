@@ -25,33 +25,43 @@ export class Statement extends Component {
     }
 
     render() {
-        return <div>
 
-            <header className="grid-row">
-                <div className="grid-col-xs grid-col-md-66">
+        const { total,
+                statement: { due, period: { from, to }={} }={},
+                package: { subscriptions=[], total: subscriptionTotal }={},
+                skyStore: { rentals=[], buyAndKeep, total: skyStoreTotal }={},
+                callCharges: { calls, total: callsTotal }={}
+        } = this.props.statement;
+
+        return (<div>
+
+            <header className="grid-row Statement">
+                <div className="grid-col-xs grid-col-md-66 Statement_title">
+                    <p className="Statement_period_dates">{ from } - { to }</p>
                     <i className="material-icons">face</i>
                     <span>STATEMENT SUMMARY</span>
                 </div>
-                <div className="grid-col-xs grid-col-md-33">
-                    <p>£135.66</p> 
+                <div className="grid-col-xs grid-col-md-33 Statement_charges">
+                    <p className="Statement_total">£{total}</p>
+                    <p className="Statement_due">due: { due }</p>
                 </div>
             </header>
 
             <main>
 
-                <SubscriptionsContainer>
-                    <PackageSubscription />
-                    <PackageSubscription />
-                    <PackageSubscription />
+                <SubscriptionsContainer total={subscriptionTotal}>
+                    { subscriptions.length && subscriptions.map(subscription => {
+                        return (<PackageSubscription key={subscription.type} type={subscription.type} name={subscription.name} cost={subscription.cost}/>);
+                    })}
                 </SubscriptionsContainer>
 
-                <SkyStoreContainer>
-                    <StorePurchase />
-                    <StorePurchase />
+                <SkyStoreContainer total={skyStoreTotal}>
+                    { rentals.length && <StorePurchase type="rental" name="RENTALS" purchases={rentals} />}
+                    { buyAndKeep && buyAndKeep.length && <StorePurchase type="buy" name="BUY AND KEEP" purchases={buyAndKeep} />}
                 </SkyStoreContainer>
 
-                <CallsContainer>
-                    <CallLog />
+                <CallsContainer total={callsTotal}>
+                    <CallLog calls={calls} />
                 </CallsContainer>
 
             </main>
@@ -59,7 +69,7 @@ export class Statement extends Component {
             <footer>
                 <i className="material-icons">copyright</i> skybill
             </footer>
-        </div>;
+        </div>);
     }
 }
 
