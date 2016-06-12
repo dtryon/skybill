@@ -27,7 +27,7 @@ export default class PackageSubscription extends Component {
     }
     render () {
         return (<article className="grid-col-xs grid-col-md-33 PackageSubscription">
-                <div className="PackageSubscription_title"><i className="material-icons">{ this.chooseIcon(this.props.type)} </i> {this.props.type.toUpperCase()}</div>
+                <h3 className="PackageSubscription_title"><i aria-hidden="true" className="material-icons">{ this.chooseIcon(this.props.type)} </i> {this.props.type.toUpperCase()}</h3>
                 <div className="grid PackageSubscription_item">
                     <div className="grid-row">
                         <div className="grid-col-xs-50 grid-col-md-90 PackageSubscription_name">

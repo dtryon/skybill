@@ -26,7 +26,7 @@ export default class StorePurchase extends Component {
 
     render () {
         return (<article className="grid-col-xs grid-col-md-50 StorePurchase">
-            <div className="StorePurchase_title"><i className="material-icons">{ this.chooseIcon(this.props.type) }</i> { this.props.name }</div>
+            <h3 className="StorePurchase_title"><i aria-hidden="true" className="material-icons">{ this.chooseIcon(this.props.type) }</i> { this.props.name }</h3>
             <div className="grid StorePurchase_items">
                 { this.props.purchases.length && this.props.purchases.map((purchase, i) => {
                     return (<div key={this.props.type + i} className="grid-row StorePurchase_item">
