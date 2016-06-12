@@ -4,6 +4,7 @@
 
 @import './base/fonts.css';
 @import './base/reset.css';
+@import './base/grid.css';
 
 /*
  * Components

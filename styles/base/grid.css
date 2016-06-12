@@ -1,0 +1,45 @@
+/*
+ * simple grids
+ */
+
+.grid {
+   position: relative;
+   margin: 0 auto;
+   width: 100%;
+}
+
+.grid-col {
+   position: relative;
+   margin: 0 auto;
+   width: 100%;
+}
+
+.grid-row:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.grid-col-xs {
+   width: 100%;
+   float: left;
+}
+
+@media (min-width: 500px) {
+   .grid-col-md-33 {
+      width: 33.3333%;
+      float: left;
+   }
+   .grid-col-md-50 {
+      width: 50%;
+      float: left;
+   }
+   .grid-col-md-66 {
+      width: 66.6666%;
+      float: left;
+   }
+   .grid-col-md-100 {
+      width: 100%;
+      float: left;
+   }
+}
