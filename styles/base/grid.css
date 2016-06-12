@@ -25,7 +25,7 @@
    float: left;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 34em) {
    .grid-col-md-33 {
       width: 33.3333%;
       float: left;
@@ -40,6 +40,14 @@
    }
    .grid-col-md-100 {
       width: 100%;
+      float: left;
+   }
+   .grid-col-md-10 {
+      width: 10%;
+      float: left;
+   }
+   .grid-col-md-90 {
+      width: 90%;
       float: left;
    }
 }
