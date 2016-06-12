@@ -1,0 +1,27 @@
+/*
+ * Calls Container
+ */
+
+.CallsContainer {
+   background-color: #262626;
+}
+
+.CallsContainer_title {
+   color: #E5E5E5;
+   font-size: 1.5rem;
+   letter-spacing: 4px;
+   padding: 20px;
+}
+
+.CallsContainer_title i {
+   font-size: 2rem;
+   line-height: 2.5rem;
+   vertical-align: middle;
+}
+
+.CallsContainer_items {
+   border-top: 5px solid #2980B9;
+   background-color: #E8E8E8;
+}
+
+

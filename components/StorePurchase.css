@@ -1,0 +1,32 @@
+/*
+ * Store Purchase
+ */
+
+.StorePurchase {
+   border-right: 1px solid #DBDBDB;
+}
+
+.StorePurchase_title {
+   padding: 20px;
+   height: 30px;
+   color: #2ECC71;
+   font-size: 1.5rem;
+   letter-spacing: 3px;
+   margin-bottom: 10px;
+}
+
+.StorePurchase_title i {
+   font-size: 2rem;
+   line-height: 2.5rem;
+   vertical-align: middle;
+}
+
+.StorePurchase_items {
+   padding: 20px;
+   min-height: 80px;
+}
+
+.StorePurchase_item {
+   margin-bottom: 10px;
+}
+

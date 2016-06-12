@@ -1,0 +1,39 @@
+/*
+ * Call Log
+ */
+
+.CallLog {
+   border-right: 1px solid #DBDBDB;
+}
+
+.CallLog_title {
+   padding: 20px;
+   height: 30px;
+   color: #3498DB;
+   font-size: 1.5rem;
+   letter-spacing: 3px;
+   margin-bottom: 10px;
+}
+
+.CallLog_title i {
+   font-size: 2rem;
+   line-height: 2.5rem;
+   vertical-align: middle;
+}
+
+.CallLog_call {
+   border-bottom: 1px dotted #DBDBDB;
+   padding: 5px;
+   line-height: 2rem;
+}
+
+.CallLog_calls {
+   min-height: 50px;
+   padding: 20px;
+}
+
+.CallLog_info i {
+   font-size: 0.8rem;
+   color: #3498DB;
+}
+

@@ -1,0 +1,26 @@
+/*
+ * Sky Store Container
+ */
+
+.SkyStoreContainer {
+   background-color: #262626;
+}
+
+.SkyStoreContainer_title {
+   color: #E5E5E5;
+   font-size: 1.5rem;
+   letter-spacing: 4px;
+   padding: 20px;
+}
+
+.SkyStoreContainer_title i {
+   font-size: 2rem;
+   line-height: 2.5rem;
+   vertical-align: middle;
+}
+
+.SkyStoreContainer_items {
+   border-top: 5px solid #27AE60;
+   background-color: #E8E8E8;
+}
+

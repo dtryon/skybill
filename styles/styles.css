@@ -12,4 +12,10 @@
  */
 
 @import '../components/Statement.css';
+@import '../components/PackageSubscription.css';
+@import '../components/SubscriptionsContainer.css';
+@import '../components/SkyStoreContainer.css';
+@import '../components/StorePurchase.css';
+@import '../components/CallsContainer.css';
+@import '../components/CallLog.css';
 

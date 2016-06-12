@@ -1,0 +1,27 @@
+/*
+ * Package Subscription
+ */
+
+.PackageSubscription {
+   border-right: 1px solid #DBDBDB;
+}
+
+.PackageSubscription_title {
+   padding: 20px;
+   height: 30px;
+   color: #1ABC9C;
+   font-size: 1.5rem;
+   letter-spacing: 3px;
+   margin-bottom: 10px;
+}
+
+.PackageSubscription_title i {
+   font-size: 2rem;
+   line-height: 2.5rem;
+   vertical-align: middle;
+}
+
+.PackageSubscription_item {
+   padding: 20px;
+   min-height: 50px;
+}
