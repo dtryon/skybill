@@ -71,11 +71,11 @@ describe('PackageSubscription', () => {
 
     it('should render subscription cost', () => {
 
-        const component = renderIntoDocument(<PackageSubscription type="tv" cost="a billion dollars" />);
+        const component = renderIntoDocument(<PackageSubscription type="tv" cost={4.44} />);
 
         const name = findRenderedDOMComponentWithClass(component, 'PackageSubscription_cost');
 
-        expect(ReactDOM.findDOMNode(name).textContent).to.contain('a billion dollars');
+        expect(ReactDOM.findDOMNode(name).textContent).to.contain('4.44');
     });
 });
 
