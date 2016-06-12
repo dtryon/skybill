@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import { getStatement } from '../actions/statement';
 
 import SubscriptionsContainer from './SubscriptionsContainer';
@@ -24,6 +25,11 @@ export class Statement extends Component {
         this.props.init();
     }
 
+    formatDate(dateString) {
+        const formattedDate = !!dateString ? moment(dateString).format('MMM Do, YYYY') : '';
+        return formattedDate;
+    }
+
     render() {
 
         const { total,
@@ -42,12 +48,12 @@ export class Statement extends Component {
                     </div>
                     <div className="Statement_text">
                         <p className="Statement_title_text">STATEMENT SUMMARY</p>
-                        <p className="Statement_period_dates">{ from } - { to }</p>
+                        <p className="Statement_period_dates">{ this.formatDate(from) } - { this.formatDate(to) }</p>
                     </div>
                 </div>
                 <div className="grid-col-xs grid-col-md-33 Statement_charges">
                     <p className="Statement_total">£{total}</p>
-                    <p className="Statement_due">due: { due }</p>
+                    <p className="Statement_due">due: { this.formatDate(due) }</p>
                 </div>
             </header>
 

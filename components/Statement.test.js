@@ -56,7 +56,7 @@ describe('Statement', () => {
 
             const statementPeriod = findRenderedDOMComponentWithClass(component, 'Statement_period_dates');
 
-            expect(ReactDOM.findDOMNode(statementPeriod).textContent).to.equal('2015-01-26 - 2015-02-25');
+            expect(ReactDOM.findDOMNode(statementPeriod).textContent).to.equal('Jan 26th, 2015 - Feb 25th, 2015');
         });
 
         it ('should render statement total', () => {
@@ -74,7 +74,7 @@ describe('Statement', () => {
 
             const statementPeriod = findRenderedDOMComponentWithClass(component, 'Statement_due');
 
-            expect(ReactDOM.findDOMNode(statementPeriod).textContent).to.equal('due: 2015-01-25');
+            expect(ReactDOM.findDOMNode(statementPeriod).textContent).to.equal('due: Jan 25th, 2015');
         });
     });
 });
