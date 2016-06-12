@@ -17,7 +17,7 @@ start the project:
 
 build the project:
 
-`npm build`
+`npm run build`
 
 ### discussion:
 

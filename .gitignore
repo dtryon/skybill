@@ -7,3 +7,6 @@ node_modules
 .npmrc
 
 .quicksave.vim
+
+client.bundle.js
+*.map
