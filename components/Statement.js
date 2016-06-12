@@ -37,9 +37,13 @@ export class Statement extends Component {
 
             <header className="grid-row Statement">
                 <div className="grid-col-xs grid-col-md-66 Statement_title">
-                    <p className="Statement_period_dates">{ from } - { to }</p>
-                    <i className="material-icons">face</i>
-                    <span>STATEMENT SUMMARY</span>
+                    <div className="Statement_icon">
+                        <i className="material-icons Statement_title_icon">face</i>
+                    </div>
+                    <div className="Statement_text">
+                        <p className="Statement_title_text">STATEMENT SUMMARY</p>
+                        <p className="Statement_period_dates">{ from } - { to }</p>
+                    </div>
                 </div>
                 <div className="grid-col-xs grid-col-md-33 Statement_charges">
                     <p className="Statement_total">£{total}</p>
@@ -67,7 +71,7 @@ export class Statement extends Component {
             </main>
 
             <footer>
-                <i className="material-icons">copyright</i> skybill
+                 &copy; skybill
             </footer>
         </div>);
     }

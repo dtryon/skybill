@@ -1,2 +1,67 @@
 .Statement {
+    height: 90px;
+    background-color: #161616;
+}
+
+.Statement_title {
+    color: #E6E6E6;
+}
+
+.Statement_title:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.Statement_icon {
+    float: left;
+    padding: 15px
+}
+
+.Statement_title_icon {
+    font-size: 3.7rem;
+}
+
+.Statement_text {
+    float: left;
+    padding: 15px;
+}
+
+.Statement_title_text {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    text-align: right;
+    line-height: 3rem;
+}
+
+.Statement_period_dates {
+    text-align: right;
+    letter-spacing: 0.8px;
+    color: #B8B8B8;
+}
+
+.Statement_charges {
+    padding: 15px;
+    background-color: #404040;
+    height: 100%;
+}
+
+.Statement_total {
+    color: #E5E5E5;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    line-height: 3rem;
+    font-weight: 700;
+}
+
+.Statement_due {
+    color: #B8B8B8;
+}
+
+footer {
+    height: 100px;
+    color: #B8B8B8;
+    background-color: #161616;
+    line-height: 100px;
+    text-align: center;
 }
