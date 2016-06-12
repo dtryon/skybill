@@ -28,8 +28,19 @@
 }
 
 .SkyStoreContainer_charges {
-   padding: 20px;
-   line-height: 2.5rem;
    font-weight: 700;
    font-size: 2rem;
+   text-align: right;
+   padding-bottom: 20px;
+   padding-right: 15px;
+}
+
+@media (min-width: 34em) {
+
+   .SkyStoreContainer_charges {
+      padding: 20px;
+      line-height: 2.5rem;
+      font-weight: 700;
+      font-size: 2rem;
+   }
 }
