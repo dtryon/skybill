@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require test_init.js  './components/**/*.test.@(js|jsx)'",
+    "test": "mocha --require test_init.js  './reducers/**/*.test.@(js|jsx)' './actions/**/*.test.@(js|jsx)' './components/**/*.test.@(js|jsx)'",
     "dev": "webpack-dev-server",
     "build": "webpack --config webpack.config.js --bail"
   },
@@ -27,8 +27,12 @@
     "babel-preset-stage-0": "^6.5.0",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
+    "deep-freeze": "0.0.1",
     "jsdom": "^9.2.1",
     "mocha": "^2.5.3",
+    "nock": "^8.0.0",
+    "node-fetch": "^1.5.3",
+    "sinon": "^1.17.4",
     "style-loader": "^0.13.1"
   },
   "dependencies": {

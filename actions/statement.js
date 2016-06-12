@@ -7,8 +7,12 @@ async function fetchStatement () {
 
 export const getStatement = () => {
     return async (dispatch) => {
-        const statement = await fetchStatement();
-        dispatch(statementReceived(statement));
+        try {
+            const statement = await fetchStatement();
+            dispatch(statementReceived(statement));
+        } catch(err) {
+            dispatch(statementFailed());
+        }
     }
 }
 
@@ -16,6 +20,13 @@ export const statementReceived = (statement) => {
     return {
         type: 'STATEMENT_RECEIVED',
         statement
+    };
+}
+
+export const statementFailed = () => {
+    return {
+        type: 'STATEMENT_FAILED',
+        message: 'there was a problem fetching the statement'
     };
 }
 
