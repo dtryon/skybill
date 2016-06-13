@@ -61,7 +61,10 @@ export class Statement extends Component {
 
                 <SubscriptionsContainer total={subscriptionTotal}>
                     { subscriptions.map(subscription => {
-                        return (<PackageSubscription key={subscription.type} type={subscription.type} name={subscription.name} cost={ subscription.cost }/>);
+                        return (<PackageSubscription key={subscription.type}
+                                    type={subscription.type}
+                                    name={subscription.name}
+                                    cost={ subscription.cost }/>);
                     })}
                 </SubscriptionsContainer>
 
