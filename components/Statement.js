@@ -35,7 +35,7 @@ export class Statement extends Component {
         const { total,
                 statement: { due, period: { from, to }={} }={},
                 package: { subscriptions=[], total: subscriptionTotal }={},
-                skyStore: { rentals=[], buyAndKeep, total: skyStoreTotal }={},
+                skyStore: { rentals=[], buyAndKeep=[], total: skyStoreTotal }={},
                 callCharges: { calls, total: callsTotal }={}
         } = this.props.statement;
 
@@ -60,14 +60,14 @@ export class Statement extends Component {
             <main>
 
                 <SubscriptionsContainer total={subscriptionTotal}>
-                    { subscriptions.length && subscriptions.map(subscription => {
+                    { subscriptions.map(subscription => {
                         return (<PackageSubscription key={subscription.type} type={subscription.type} name={subscription.name} cost={ subscription.cost }/>);
                     })}
                 </SubscriptionsContainer>
 
                 <SkyStoreContainer total={skyStoreTotal}>
                     { rentals.length && <StorePurchase type="rental" name="RENTALS" purchases={rentals} />}
-                    { buyAndKeep && buyAndKeep.length && <StorePurchase type="buy" name="BUY AND KEEP" purchases={buyAndKeep} />}
+                    { buyAndKeep.length && <StorePurchase type="buy" name="BUY AND KEEP" purchases={buyAndKeep} />}
                 </SkyStoreContainer>
 
                 <CallsContainer total={callsTotal}>

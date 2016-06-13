@@ -28,7 +28,7 @@ export default class StorePurchase extends Component {
         return (<article className="grid-col-xs grid-col-md-50 StorePurchase">
             <h3 className="StorePurchase_title"><i aria-hidden="true" className="material-icons">{ this.chooseIcon(this.props.type) }</i> { this.props.name }</h3>
             <div className="grid StorePurchase_items">
-                { this.props.purchases.length && this.props.purchases.map((purchase, i) => {
+                { this.props.purchases.map((purchase, i) => {
                     return (<div key={this.props.type + i} className="grid-row StorePurchase_item">
                         <div className="grid-col-xs-50 grid-col-md-90 StorePurchase_item_name">
                             <p>{ purchase.title }</p>
