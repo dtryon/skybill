@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import currency from '../lib/currency';
+
 export default class PackageSubscription extends Component {
     static propTypes = {
         type: React.PropTypes.string,
@@ -34,7 +36,7 @@ export default class PackageSubscription extends Component {
                             <p>{ this.props.name }</p>
                         </div>
                         <div className="grid-col-xs-50 grid-col-md-10 PackageSubscription_cost">
-                            <p>£{ this.props.cost && this.props.cost.toFixed(2) }</p>
+                            <p>{ currency.format(this.props.cost) }</p>
                         </div>
                     </div>
                 </div>

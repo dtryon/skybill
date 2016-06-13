@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import currency from '../lib/currency';
+
 export default class SubscriptionsContainer extends Component {
     static propTypes = {
         total: React.PropTypes.number
@@ -16,7 +18,7 @@ export default class SubscriptionsContainer extends Component {
                     <h2><i aria-hidden="true" className="material-icons">subscriptions</i> SUBCRIPTIONS</h2>
                 </div>
                 <div className="grid-col-xs grid-col-md-33 SubscriptionsContainer_charges">
-                    <p className="SubscriptionsContainer_total">£{ this.props.total.toFixed(2) }</p>
+                    <p className="SubscriptionsContainer_total">{ currency.format(this.props.total) }</p>
                 </div>
             </div>
             <div className="grid-row SubscriptionsContainer_items">

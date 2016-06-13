@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import currency from '../lib/currency';
+
 export default class CallLog extends Component {
     static propTypes = {
         calls: React.PropTypes.array
@@ -19,7 +21,7 @@ export default class CallLog extends Component {
                             <p><i aria-hidden="true" className="material-icons">call_made</i> CALLED -> { call.called } ({ call.duration })</p>
                         </div>
                         <div className="grid-col-xs-50 grid-col-md-10 CallLog_cost">
-                            <p>£{ call.cost && call.cost.toFixed(2) }</p>
+                            <p>{ currency.format(call.cost) }</p>
                         </div>
                     </div>);
                 })}

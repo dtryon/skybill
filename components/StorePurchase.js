@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import currency from '../lib/currency';
+
 export default class StorePurchase extends Component {
     static propTypes = {
         purchases: React.PropTypes.array,
@@ -34,7 +36,7 @@ export default class StorePurchase extends Component {
                             <p>{ purchase.title }</p>
                         </div>
                         <div className="grid-col-xs-50 grid-col-md-10 StorePurchase_item_cost">
-                            <p>£{ purchase.cost.toFixed(2) }</p>
+                            <p>{ currency.format(purchase.cost) }</p>
                         </div>
                     </div>);
                 })}
